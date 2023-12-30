@@ -2,6 +2,8 @@
 
 document.getElementById("btn1").addEventListener("click", getFetch);
 document.getElementById("btn2").addEventListener("click", poke2);
+const p1Abilities = document.getElementById("p1Abilities");
+const p2Abilities = document.getElementById("p2Abilities");
 
 function getFetch() {
   const choice = document.getElementById("in1").value.toLowerCase();
@@ -10,7 +12,7 @@ function getFetch() {
   fetch(url)
     .then((res) => res.json()) // parse response as JSON
     .then((data) => {
-      console.log(data);
+      // console.log(data.moves);
 
       //uppercase the first letter
       const upperCaseName =
@@ -19,27 +21,25 @@ function getFetch() {
       document.getElementById("pokeName1").innerText = upperCaseName;
       document.getElementById("picture1").src = data.sprites.front_default;
 
-      //make ul into variables
-      const list1 = document.getElementById("list1");
-      //remove past li
-      list1.innerHTML = "";
       data.types.forEach((type) => {
         console.log(data.types);
-        //uppercase the first letter
         const upperCaseType =
           type.type.name.charAt(0).toUpperCase() + type.type.name.slice(1);
         document.querySelector("#type1").innerText = upperCaseType;
       });
-      //then run a forEach to loop through arrays
-      data.abilities.forEach((type) => {
-        // console.log(data.types);
-        const li1 = document.createElement("li");
-        li1.textContent = type.ability.name;
-        list1.appendChild(li1);
+      let options = p1Abilities.getElementsByTagName("option");
+      let optionsArray = Array.from(options);
+      for (let i = optionsArray.length; i--; ) {
+        p1Abilities.removeChild(optionsArray[i]);
+      }
+
+      const moves = data.moves;
+      moves.forEach((move) => {
+        let moveOption = document.createElement("option");
+        moveOption.textContent = move.move.name;
+        moveOption.value = move.move.name;
+        p1Abilities.appendChild(moveOption);
       });
-      //create an li
-      //put text into li
-      //append the li
     })
     .catch((err) => {
       console.log(`error ${err}`);
@@ -64,10 +64,6 @@ function poke2() {
       document.getElementById("pokeName2").innerText = upperCaseName;
       document.getElementById("picture2").src = data.sprites.back_default;
 
-      //make ul into variables
-      const list2 = document.getElementById("list2");
-      //remove past li
-      list2.innerHTML = "";
       data.types.forEach((type) => {
         console.log(data.types);
         //uppercase the first letter
@@ -75,16 +71,19 @@ function poke2() {
           type.type.name.charAt(0).toUpperCase() + type.type.name.slice(1);
         document.querySelector("#type2").innerText = upperCaseType;
       });
-      //then run a forEach to loop through arrays
-      data.moves.forEach((type) => {
-        // console.log(data.types);
-        const li2 = document.createElement("li");
-        li2.textContent = type.move.name;
-        list2.appendChild(li2);
+      let options = p2Abilities.getElementsByTagName("option");
+      let optionsArray = Array.from(options);
+      for (let i = optionsArray.length; i--; ) {
+        p2Abilities.removeChild(optionsArray[i]);
+      }
+      const moves = data.moves;
+      moves.forEach((move) => {
+        console.log(move.move.name);
+        let moveOption = document.createElement("option");
+        moveOption.textContent = move.move.name;
+        moveOption.value = move.move.name;
+        p2Abilities.appendChild(moveOption);
       });
-      //create an li
-      //put text into li
-      //append the li
     })
     .catch((err) => {
       console.log(`error ${err}`);
