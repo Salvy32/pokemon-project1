@@ -20,6 +20,10 @@ body{
   justify-content: space-between;
 }
 
+#pokeBattle{
+  text-align: center;
+}
+
 /***************************************************
 /* sections 
 /**************************************************/
