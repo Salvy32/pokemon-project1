@@ -27,7 +27,7 @@ body{
   display: flex;
   justify-content: space-between;
   width: 100%;
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
   padding: 1rem;
 }
 .sec2{
@@ -37,18 +37,18 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
 }
 .sec3, .sec4{
-  outline: 2px solid white;
+  /* outline: 2px solid white; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
 }
-.sec4{
+/* .sec4{
   outline: 2px solid black;
-}
+} */
 
 .bottomSection{
   display: flex;
