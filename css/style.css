@@ -27,8 +27,12 @@ body{
   display: flex;
   justify-content: space-between;
   width: 100%;
-  /* outline: 1px solid red; */
+  outline: 1px solid red;
   padding: 1rem;
+  padding-top: 8rem;
+  padding-bottom: 1rem;
+  
+  /* margin-bottom: 44rem; */
 }
 .sec2{
   text-align: right;
@@ -37,7 +41,9 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* outline: 1px solid red; */
+  padding-bottom: 50vh;
+  padding-top: 15vh; 
+  outline: 1px solid red;
 }
 .sec3, .sec4{
   /* outline: 2px solid white; */
@@ -46,12 +52,38 @@ body{
   justify-content: center;
   text-align: center;
 }
-/* .sec4{
+.sec3{
+  outline: solid blue;
+}
+.sec4{
   outline: 2px solid black;
-} */
+}
 
 .bottomSection{
   display: flex;
   justify-content: space-between;
   padding: 1rem;
+  padding-top: 5rem;
+}
+
+/*********************************************
+/* Pokemon Type & Pokemon Name
+/********************************************/
+/* #type1{
+  padding-top: rem;
+} */
+
+/* #pokemonName1{
+  
+} */
+
+/*********************************************
+/* Character Images
+/********************************************/
+.picture1{
+  margin-bottom: 50rem;
+}
+img{
+  height: 280px;
+  width: 280px;
 }
