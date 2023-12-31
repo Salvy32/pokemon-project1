@@ -22,6 +22,7 @@ body{
 
 #pokeBattle{
   text-align: center;
+  font-size: 60px;
 }
 
 /***************************************************
@@ -31,10 +32,10 @@ body{
   display: flex;
   justify-content: space-between;
   width: 100%;
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
   padding: 1rem;
-  padding-top: 8rem;
-  padding-bottom: 1rem;
+  padding-top: 7rem;
+  padding-bottom: 9rem;
   
   /* margin-bottom: 44rem; */
 }
@@ -45,9 +46,9 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 50vh;
-  padding-top: 15vh; 
-  outline: 1px solid red;
+  padding-bottom: 13vh;
+  padding-top: 7vh; 
+  /* outline: 1px solid red; */
 }
 .sec3, .sec4{
   /* outline: 2px solid white; */
@@ -56,12 +57,12 @@ body{
   justify-content: center;
   text-align: center;
 }
-.sec3{
-  outline: solid blue;
-}
-.sec4{
-  outline: 2px solid black;
-}
+/* .sec3{ */
+  /* outline: solid blue; */
+/* } */
+/* .sec4{ */
+  /* outline: 2px solid black; */
+/* } */
 
 .bottomSection{
   display: flex;
@@ -71,23 +72,39 @@ body{
 }
 
 /*********************************************
-/* Pokemon Type & Pokemon Name
+/*Top section input & button styling
 /********************************************/
-/* #type1{
-  padding-top: rem;
-} */
+#in1{
+  color: rgb(0, 0, 255);
+}
+#in2{
+  color:red;
+}
+/*********************************************
+/* Pokemon Type & Pokemon Name styling
+/********************************************/
+#type1,#type2{
+  font-size: 12px;
+}
 
-/* #pokemonName1{
-  
-} */
+#pokeName1{
+  font-size: 20px;
+  color: blue;
+}
+#pokeName2{
+  font-size: 20px;
+  color: red;
+}
 
 /*********************************************
 /* Character Images
 /********************************************/
-.picture1{
-  margin-bottom: 50rem;
-}
-img{
-  height: 280px;
-  width: 280px;
+ #picture1{
+  height: 400px;
+  width: 400px;
+} 
+#picture2{
+  height: 400px;
+  width: 400px;
+  margin-bottom: 210px;
 }
